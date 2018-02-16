@@ -28,40 +28,40 @@ func main() {
 
 func writeMarkdownKontakt(ctx iris.Context) {
 	println("Handler executed. Content refreshed.")
-	ctx.View("test_kontakt.html")
+	ctx.View("kontakt.html")
 }
 
 func writeMarkdownPodekovani(ctx iris.Context) {
 	println("Handler executed. Content refreshed.")
-	ctx.View("test_podekovani.html")
+	ctx.View("podekovani.html")
 }
 
 func writeMarkdownZajimavosti(ctx iris.Context) {
 	println("Handler executed. Content refreshed.")
-	ctx.View("test_zajimavosti.html")
+	ctx.View("zajimavosti.html")
 }
 
 func writeMarkdown(ctx iris.Context) {
 	println("Handler executed. Content refreshed.")
-	ctx.View("test_index.html")
+	ctx.View("index.html")
 }
 
 func writeMarkdownOnas(ctx iris.Context) {
 	println("Handler executed. Content refreshed.")
-	ctx.View("test_o_nas.html")
+	ctx.View("o_nas.html")
 }
 
 func writeMarkdownAkce(ctx iris.Context) {
 	println("Handler executed. Content refreshed.")
-	ctx.View("test_akce.html")
+	ctx.View("akce.html")
 }
 
 func writeMarkdownOknihovne(ctx iris.Context) {
 	println("Handler executed. Content refreshed.")
-	ctx.View("test_o_knihovne.html")
+	ctx.View("o_knihovne.html")
 }
 
 func writeMarkdownSluzby(ctx iris.Context) {
 	println("Handler executed. Content refreshed.")
-	ctx.View("test_sluzby.html")
+	ctx.View("sluzby.html")
 }
