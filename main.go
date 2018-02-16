@@ -6,6 +6,7 @@ import (
 	"time"
 )
 
+
 func main() {
 	app := iris.New()
 	app.StaticServe("./templates/images", "/images")
