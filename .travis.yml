@@ -16,5 +16,6 @@ python:
 
 before_script:
   - pip install requests
+  - npm install css-minify -g
   - npm install stylus -g
   - go get github.com/kataras/iris
