@@ -28,6 +28,6 @@ before_deploy:
 deploy:
   provider: script
   skip_cleanup: true
-  script: printf $TRAVIS_BUILD_DIR && rsync -r --delete-after --quiet -e "ssh -p 13664" $TRAVIS_BUILD_DIR/<dir> app@node-13.rosti.cz:/srv/app/
+  script: rsync -r --delete-after --quiet -e "ssh -p 13664" $TRAVIS_BUILD_DIR app@node-13.rosti.cz:/srv/app/
   on:
     branch: master
