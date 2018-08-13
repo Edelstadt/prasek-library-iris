@@ -12,12 +12,14 @@ before_script:
 - npm install stylus -g
 - go get github.com/kataras/iris
 
-before_install:
-- openssl aes-256-cbc -K $encrypted_335949d17217_key -iv $encrypted_335949d17217_iv
-  -in deploy_rsa.enc -out deploy_rsa -d
+#before_install:
+#- openssl aes-256-cbc -K $encrypted_335949d17217_key -iv $encrypted_335949d17217_iv
+#  -in deploy_rsa.enc -out deploy_rsa -d
 
 addons:
-  ssh_known_hosts: node-13.rosti.cz
+ssh_known_hosts:
+     - node-13.rosti.cz:13664
+     - 46.101.184.215:13664
 
 before_deploy:
   - openssl aes-256-cbc -K $encrypted_335949d17217_key -iv $encrypted_335949d17217_iv -in deploy_rsa.enc -out /tmp/deploy_rsa -d
