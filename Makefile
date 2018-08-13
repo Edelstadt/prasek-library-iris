@@ -10,13 +10,14 @@ DESTINATIONPORT=13664
 DESTINATIONDIR=/srv/app/
 DESTINATIONUSER=app
 NAME=knihovna
-VERSION=0.2
+VERSION=0.3
 
 .PHONY: all build upload clean
 
 build:
 	stylus ${BASEDIR}/templates/style.styl -o ${BASEDIR}/templates/style.css
 	css-minify -d templates
+	cp ${BASEDIR}/css-dist/* ${BASEDIR}/templates/
 	go build -ldflags="-s -w" -i -o ${BASEDIR}/test ${BASEDIR}/main.go
 	#upx --brute ${BASEDIR}/test
 
