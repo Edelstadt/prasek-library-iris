@@ -26,6 +26,6 @@ before_deploy:
 deploy:
   provider: script
   skip_cleanup: true
-  script: rsync -r --delete-after --quiet -e "ssh -p 13664 -o StrictHostKeyChecking=no" $TRAVIS_BUILD_DIR/prasek-library-iris/ app@node-13.rosti.cz:/srv/app/
+  script: rsync -r --delete-after --quiet -e "ssh -p 13664 -o StrictHostKeyChecking=no" $TRAVIS_BUILD_DIR/ app@node-13.rosti.cz:/srv/app/
   on:
     branch: master
