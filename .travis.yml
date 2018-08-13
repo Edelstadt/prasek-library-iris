@@ -9,6 +9,9 @@ language: go
 go:
   - 1.9
   - master
+node_js:
+  - 9.1.0
 
 before_script:
+  - npm install stylus
   - go get github.com/kataras/iris
