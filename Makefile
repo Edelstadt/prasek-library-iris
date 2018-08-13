@@ -16,7 +16,7 @@ VERSION=0.2
 
 build:
 	stylus ${BASEDIR}/templates/style.styl -o ${BASEDIR}/templates/style.css
-	css-minify -d ${BASEDIR}/templates
+	css-minify -d templates
 	go build -ldflags="-s -w" -i -o ${BASEDIR}/test ${BASEDIR}/main.go
 	#upx --brute ${BASEDIR}/test
 
